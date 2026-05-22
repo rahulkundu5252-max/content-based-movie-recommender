@@ -2,11 +2,13 @@ import os
 import streamlit as st
 import pickle
 import requests
+import subprocess
 
 # Auto-generate pkl files if missing
 if not os.path.exists('movies.pkl') or not os.path.exists('similarity.pkl'):
     st.warning("Setting up for first time... please wait!")
-    exec(open('setup.py').read())
+    subprocess.run(['python', 'setup.py'], check=True)
+    st.rerun()
 
 movies = pickle.load(open('movies.pkl', 'rb'))
 similarity = pickle.load(open('similarity.pkl', 'rb'))
