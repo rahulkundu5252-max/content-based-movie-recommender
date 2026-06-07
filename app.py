@@ -21,10 +21,8 @@ def load_model():
     movies_df = pd.read_csv('tmdb_5000_movies.csv')
     credits_df = pd.read_csv('tmdb_5000_credits.csv')
  
-    # Merge
     movies_df = movies_df.merge(credits_df, on='title')
  
-    # Keep relevant columns
     movies_df = movies_df[['movie_id', 'title', 'overview', 'genres', 'keywords', 'cast', 'crew']]
     movies_df.dropna(inplace=True)
  
