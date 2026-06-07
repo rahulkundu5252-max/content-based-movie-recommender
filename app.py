@@ -26,7 +26,7 @@ def load_model():
     movies_df = movies_df[['movie_id', 'title', 'overview', 'genres', 'keywords', 'cast', 'crew']]
     movies_df.dropna(inplace=True)
  
-    # Helper: parse JSON-like list columns
+    
     def convert(obj):
         return [i['name'] for i in ast.literal_eval(obj)]
  
