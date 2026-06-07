@@ -9,7 +9,6 @@ from sklearn.metrics.pairwise import cosine_similarity
 import nltk
 from nltk.stem.porter import PorterStemmer
  
-# 1. BUILD & CACHE MODEL (replaces setup.py)
 
 @st.cache_resource(show_spinner="🎬 Setting up for first time... please wait!")
 def load_model():
@@ -19,8 +18,6 @@ def load_model():
         similarity = pickle.load(open('similarity.pkl', 'rb'))
         return movies, similarity
  
-    # ── Otherwise build from raw data
-    # Load datasets (make sure these CSV files are in your repo)
     movies_df = pd.read_csv('tmdb_5000_movies.csv')
     credits_df = pd.read_csv('tmdb_5000_credits.csv')
  
