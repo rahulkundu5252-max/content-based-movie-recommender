@@ -45,7 +45,7 @@ def load_model():
     movies_df['crew']     = movies_df['crew'].apply(fetch_director)
     movies_df['overview'] = movies_df['overview'].apply(lambda x: x.split())
  
-    # Remove spaces inside names so they become single tokens
+    
     for col in ['genres', 'keywords', 'cast', 'crew']:
         movies_df[col] = movies_df[col].apply(lambda x: [i.replace(" ", "") for i in x])
  
