@@ -61,7 +61,7 @@ def load_model():
     new_df = movies_df[['movie_id', 'title', 'tags']].copy()
     new_df['tags'] = new_df['tags'].apply(lambda x: " ".join(x).lower())
  
-    # Stem tags
+    
     nltk.download('punkt', quiet=True)
     ps = PorterStemmer()
     new_df['tags'] = new_df['tags'].apply(
