@@ -91,9 +91,6 @@ def fetch_poster(movie_id):
     except Exception as e:
         print(f"Error: {e}")
         return "https://via.placeholder.com/500x750?text=No+Poster"
- 
- 
-# 3. RECOMMEND
 
 def recommend(movie, movies, similarity):
     movie_index = movies[movies['title'] == movie].index[0]
