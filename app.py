@@ -80,8 +80,6 @@ def load_model():
     return new_df, similarity
  
  
-# 2. FETCH POSTER
-
 def fetch_poster(movie_id):
     try:
         url  = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key=3b4852b9dcf3902e330382fb95a72fef"
