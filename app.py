@@ -49,7 +49,7 @@ def load_model():
     for col in ['genres', 'keywords', 'cast', 'crew']:
         movies_df[col] = movies_df[col].apply(lambda x: [i.replace(" ", "") for i in x])
  
-    # Build tags
+   
     movies_df['tags'] = (
         movies_df['overview'] +
         movies_df['genres'] +
