@@ -68,7 +68,7 @@ def load_model():
         lambda x: " ".join(ps.stem(w) for w in x.split())
     )
  
-    # Vectorize & compute similarity
+    
     cv  = CountVectorizer(max_features=5000, stop_words='english')
     vec = cv.fit_transform(new_df['tags']).toarray()
     similarity = cosine_similarity(vec)
