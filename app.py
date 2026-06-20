@@ -73,7 +73,7 @@ def load_model():
     vec = cv.fit_transform(new_df['tags']).toarray()
     similarity = cosine_similarity(vec)
  
-    # Save pkl files
+    
     pickle.dump(new_df, open('movies.pkl', 'wb'))
     pickle.dump(similarity, open('similarity.pkl', 'wb'))
  
