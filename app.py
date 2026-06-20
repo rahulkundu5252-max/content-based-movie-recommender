@@ -111,7 +111,7 @@ def recommend(movie, movies, similarity):
 st.set_page_config(page_title="🎬 Movie Recommender", layout="wide")
 st.title('🎬 Movie Recommender System')
  
-# Load model (cached — only runs once)
+
 movies, similarity = load_model()
  
 selected_movie = st.selectbox('Select a movie', movies['title'].values)
