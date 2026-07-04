@@ -9,7 +9,6 @@ from sklearn.metrics.pairwise import cosine_similarity
 import nltk
 from nltk.stem.porter import PorterStemmer
  
-hello
 @st.cache_resource(show_spinner="🎬 Setting up for first time... please wait!")
 def load_model():
     # ── If pkl files already exist, just load them
