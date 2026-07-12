@@ -8,7 +8,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import nltk
 from nltk.stem.porter import PorterStemmer
-dsd
+
  
 @st.cache_resource(show_spinner="🎬 Setting up for first time... please wait!")
 def load_model():
